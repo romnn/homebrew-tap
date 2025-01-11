@@ -5,16 +5,15 @@
 class CargoFc < Formula
   desc "Plugin for `cargo` to run commands against selected combinations of features."
   homepage ""
-  version "0.0.33"
+  version "0.0.35"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.33/cargo-feature-combinations_0.0.33_darwin_arm64.tar.gz"
-      sha256 "ceb0cdffd2890a73486c741a3b0958173c250b49fd2be7379dd37d368b22718a"
+      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.35/cargo-fc_0.0.35_darwin_arm64.tar.gz"
+      sha256 "7e875aa53762372c4537cd1ca9c611aaaaff8561b2241c04c0ca49d94521029a"
 
       def install
         bin.install "cargo-fc"
-        bin.install "cargo-feature-combinations"
       end
     end
   end
@@ -22,12 +21,11 @@ class CargoFc < Formula
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.33/cargo-feature-combinations_0.0.33_linux_arm64.tar.gz"
-        sha256 "204c1add8c133d072ddb0f8685eef1bc7d5ff530e645ebc58a24ca98d63a0d9f"
+        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.35/cargo-fc_0.0.35_linux_arm64.tar.gz"
+        sha256 "17edb7f75dfa85f5a8fd7fc0590d72157371a62f599cb520bfb8dc3f1b0dfbb0"
 
         def install
           bin.install "cargo-fc"
-          bin.install "cargo-feature-combinations"
         end
       end
     end
