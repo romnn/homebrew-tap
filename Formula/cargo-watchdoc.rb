@@ -5,12 +5,12 @@
 class CargoWatchdoc < Formula
   desc "A CLI to generate and serve your `cargo doc` documentation with hot-reloading during development."
   homepage ""
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/romnn/cargo-watchdoc/releases/download/v0.3.4/cargo-watchdoc_0.3.4_darwin_arm64.tar.gz"
-      sha256 "c655eb2f861a4ca259a8537ff1c12e17cef0e2456bd591c42082c5f899bb90d1"
+      url "https://github.com/romnn/cargo-watchdoc/releases/download/v0.3.5/cargo-watchdoc_0.3.5_darwin_arm64.tar.gz"
+      sha256 "3a865fedf0306936ceb58e3699cface73e99b25c06b6db12381f32824ef99f04"
 
       def install
         bin.install "cargo-watchdoc"
@@ -21,8 +21,8 @@ class CargoWatchdoc < Formula
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/cargo-watchdoc/releases/download/v0.3.4/cargo-watchdoc_0.3.4_linux_arm64.tar.gz"
-        sha256 "f0e8d798c11e63495ae5f01b1355e2d28fdce30e3cccce3e7f8a5b793bb41850"
+        url "https://github.com/romnn/cargo-watchdoc/releases/download/v0.3.5/cargo-watchdoc_0.3.5_linux_arm64.tar.gz"
+        sha256 "d9adf275dedf2a3b9d8a2e14e711e008fa3924c7cccddd279b2a5eef62f8cc9f"
 
         def install
           bin.install "cargo-watchdoc"
