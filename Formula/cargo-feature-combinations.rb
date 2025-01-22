@@ -5,12 +5,20 @@
 class CargoFeatureCombinations < Formula
   desc "Plugin for `cargo` to run commands against selected combinations of features."
   homepage ""
-  version "0.0.35"
+  version "0.0.36"
 
   on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.36/cargo-feature-combinations_0.0.36_darwin_amd64.tar.gz"
+      sha256 "153e852a5a5deda9359bf415afa9b97a34beb472f728bb5aa504ea3dce42d67f"
+
+      def install
+        bin.install "cargo-feature-combinations"
+      end
+    end
     if Hardware::CPU.arm?
-      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.35/cargo-feature-combinations_0.0.35_darwin_arm64.tar.gz"
-      sha256 "c7936b67b0ed4234b0ed4af646178bcbdf1bcc7ab6078a90333bd77fbfc32f0f"
+      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.36/cargo-feature-combinations_0.0.36_darwin_arm64.tar.gz"
+      sha256 "62c9c7b77e5b5324d0d7062efba757e11fe0ab9ef3904d26e0ce2ea94dde1f91"
 
       def install
         bin.install "cargo-feature-combinations"
@@ -19,10 +27,20 @@ class CargoFeatureCombinations < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.36/cargo-feature-combinations_0.0.36_linux_amd64.tar.gz"
+        sha256 "a5545d935fd82bfe5fb3edfb3bf74d1d5753523d248ab372f36b0f697b655fdc"
+
+        def install
+          bin.install "cargo-feature-combinations"
+        end
+      end
+    end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.35/cargo-feature-combinations_0.0.35_linux_arm64.tar.gz"
-        sha256 "d15ac4fab55cfe9e946e056974ce8c051ceadd517e14d98a7be684eed01435e1"
+        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.36/cargo-feature-combinations_0.0.36_linux_arm64.tar.gz"
+        sha256 "ba78b5dce5c267a6ce08dea5e32de488c1c1c2d65eb472b6029b666a07930814"
 
         def install
           bin.install "cargo-feature-combinations"
