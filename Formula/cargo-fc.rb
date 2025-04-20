@@ -5,20 +5,20 @@
 class CargoFc < Formula
   desc "Plugin for `cargo` to run commands against selected combinations of features."
   homepage ""
-  version "0.0.38"
+  version "0.0.39"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.38/cargo-fc_0.0.38_darwin_amd64.tar.gz"
-      sha256 "2ba5720448bb615643be502fdd2c3dce9fe64b77951a8427d09fa6049494025e"
+      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.39/cargo-fc_0.0.39_darwin_amd64.tar.gz"
+      sha256 "28a50f75b211f537fe99d90c590435b972474784214bdceffc77f4147886a756"
 
       def install
         bin.install "cargo-fc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.38/cargo-fc_0.0.38_darwin_arm64.tar.gz"
-      sha256 "872fcb7069c5c9b6b455c84e5aaea81ee89f443b0413c0ee2d23ddf4fea8da12"
+      url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.39/cargo-fc_0.0.39_darwin_arm64.tar.gz"
+      sha256 "ae6f1bfb1255ad3bcc3dfe2315381a40ef19c20b0a8208e4fda88d731998750d"
 
       def install
         bin.install "cargo-fc"
@@ -29,8 +29,8 @@ class CargoFc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.38/cargo-fc_0.0.38_linux_amd64.tar.gz"
-        sha256 "42e484ae98c3a7df14fff820979fb612a729a99408cc00c3cbf3bf83f9e3d23d"
+        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.39/cargo-fc_0.0.39_linux_amd64.tar.gz"
+        sha256 "ab9425498ac8b83e4ef0988aa5c9c49a5ad62729bb798a543a448899f9f5dddc"
 
         def install
           bin.install "cargo-fc"
@@ -39,8 +39,8 @@ class CargoFc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.38/cargo-fc_0.0.38_linux_arm64.tar.gz"
-        sha256 "3c58309bf25096cd0735c7f2320cabd4556a1b9d6bf34dc827fb0cca9b9f0564"
+        url "https://github.com/romnn/cargo-feature-combinations/releases/download/v0.0.39/cargo-fc_0.0.39_linux_arm64.tar.gz"
+        sha256 "064f9a1a82eb3b1ec8db2449e492ab2d47fb88a6a130037995590448a4824fdd"
 
         def install
           bin.install "cargo-fc"
