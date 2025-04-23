@@ -5,20 +5,20 @@
 class CargoPublishCrates < Formula
   desc "Publish rust crates with support for cargo workspaces"
   homepage ""
-  version "0.0.25"
+  version "0.0.26"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/romnn/publish-crates/releases/download/v0.0.25/cargo-publish-crates_0.0.25_darwin_amd64.tar.gz"
-      sha256 "faae8794696f89d4be31fee4ff57654e6d1487b35a357e2724fb242cbf79d927"
+      url "https://github.com/romnn/publish-crates/releases/download/v0.0.26/cargo-publish-crates_0.0.26_darwin_amd64.tar.gz"
+      sha256 "d89a2d904a10e568f30cccc1975de312a0af41782e77620c49a6bedf1b44805b"
 
       def install
         bin.install "cargo-publish-crates"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/romnn/publish-crates/releases/download/v0.0.25/cargo-publish-crates_0.0.25_darwin_arm64.tar.gz"
-      sha256 "1148e5cdc2fd5be62e29bf4b6c363221d2865d90af863d23d42ca5db3748502e"
+      url "https://github.com/romnn/publish-crates/releases/download/v0.0.26/cargo-publish-crates_0.0.26_darwin_arm64.tar.gz"
+      sha256 "ec4990dbd8a428e0983808e4c52ab26b4a28610544eb37da1f648accb60f45f7"
 
       def install
         bin.install "cargo-publish-crates"
@@ -29,8 +29,8 @@ class CargoPublishCrates < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/publish-crates/releases/download/v0.0.25/cargo-publish-crates_0.0.25_linux_amd64.tar.gz"
-        sha256 "5cede280b55bf1ed7f0a0ddcaa92ed2cebc28db870ba92c28a48cf5b5ee40d60"
+        url "https://github.com/romnn/publish-crates/releases/download/v0.0.26/cargo-publish-crates_0.0.26_linux_amd64.tar.gz"
+        sha256 "f5cf2ca695c8af6283ffff34f4607c31e90a90cc3577158f18cc6d202d3ead26"
 
         def install
           bin.install "cargo-publish-crates"
@@ -39,8 +39,8 @@ class CargoPublishCrates < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/romnn/publish-crates/releases/download/v0.0.25/cargo-publish-crates_0.0.25_linux_arm64.tar.gz"
-        sha256 "5aab00b5e43f1d5be356cd4f8d8f81232ac987f100c3c1297c52193111233a3d"
+        url "https://github.com/romnn/publish-crates/releases/download/v0.0.26/cargo-publish-crates_0.0.26_linux_arm64.tar.gz"
+        sha256 "903733db132e8bde0c2ba5c3e93999178355e54c732a69156698a96f4b0903a7"
 
         def install
           bin.install "cargo-publish-crates"
