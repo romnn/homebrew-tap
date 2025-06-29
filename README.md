@@ -6,8 +6,9 @@ Most projects are distributed as small, dependency-free, statically-linked binar
 #### Installation example
 
 ```bash
-brew install romnn/tap/cargo-fc
+# formulas
+brew install romnn/tap/<formula-name>
 
-# to install <project>, do
-brew install romnn/tap/<project>
+# casks
+brew install --cask romnn/tap/<cask-name>
 ```
