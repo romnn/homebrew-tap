@@ -3,7 +3,7 @@ cask "bumpversion" do
   name "bumpversion"
   desc "Update all version strings in your project and optionally commit and tag the changes"
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,27 +14,27 @@ cask "bumpversion" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_amd64.tar.gz"
-      sha256 "8a7ba1b573d301fdd992b343cd94358ecfba9a0f913a835eb20e354641200bc7"
+      sha256 "a29694b0801af2a4aa2b3ac58759e60c4865086c220bcb5cff0c4570343f8470"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_arm64.tar.gz"
-      sha256 "7947c20901f4f7408ab854fd838f33a5b77a5dcf673a63c50d8c4d415260ed65"
+      sha256 "54fe2c9c5e4e59842f048dcc595f6b18149932673167e2be8c03982ef11c2877"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_amd64.tar.gz"
-      sha256 "b15fa2c053ce4c3aef0d89e6eeeef79f0a1892457b6c9b8a81cdeb110e0675de"
+      sha256 "5fc91926adbfe5f2077b6ae52ca3166cda993eede349f62e2ff2963d8fb52983"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_arm64.tar.gz"
-      sha256 "90892295a3d9b3527461556e4f3fc9a2302bd562572f6b2083eaebdd74db2e27"
+      sha256 "94819d6d2970b10fa3e465e22dd314b6302c0d41d445e69275cdad253a4130d7"
     end
   end
 
   postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+    if OS.mac? && File.exist?("/usr/bin/xattr")
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/bumpversion"]
     end
   end
