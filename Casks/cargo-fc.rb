@@ -3,7 +3,7 @@ cask "cargo-fc" do
   name "cargo-fc"
   desc "Plugin for `cargo` to run commands against selected combinations of features."
   homepage ""
-  version "0.0.42"
+  version "0.0.43"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cargo-fc" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_darwin_amd64.tar.gz"
-      sha256 "09581067bce6fb071c2802818a86d364d09d4633c87cebc3b56f666d0acd5113"
+      sha256 "34c347faf570d1cfbbf6527e288d580c8fd376dda2d21a77bf3709daff91f71d"
     end
     on_arm do
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_darwin_arm64.tar.gz"
-      sha256 "b6628c909d6a5b452f59f63a67f4aa188fbaad02f769044e9845fea0741dbd35"
+      sha256 "470e8c55bf798a91e0ecb1b0a4e5d2df3589d66d864e49b4a2d287b4720ab8c0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_linux_amd64.tar.gz"
-      sha256 "af267a40d572694ff88fc1a926775b7e6ff3b207cb0c3a55eeee7dec44a13a70"
+      sha256 "be8fec86e63bc0b2d5a68196a0aeb7820f40301cbceb329ba89e95d653bb8673"
     end
     on_arm do
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_linux_arm64.tar.gz"
-      sha256 "781fc270db52800e11d5e371db1be402e59ee6bc22a04bfdbeebb6aa2e0740b9"
+      sha256 "b600d79db41a4a50fbfd7c9001a7b8be7d75916f0144e05ca9f47daa5c50e997"
     end
   end
 
