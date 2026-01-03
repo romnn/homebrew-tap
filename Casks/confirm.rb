@@ -3,7 +3,7 @@ cask "confirm" do
   name "confirm"
   desc "A dead simple CLI app that asks the user for a yes/no confirmation"
   homepage ""
-  version "1.0.6"
+  version "1.0.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "confirm" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/confirm/releases/download/v#{version}/confirm_#{version}_darwin_amd64.tar.gz"
-      sha256 "07d9a0fb8dda1ea72decf2001ab1610f7c5f323a326e86d3e641b511f4285296"
+      sha256 "464baa639204c220b01cd25b310522c27f7591b7a73b5189cf2d14de34d3efc1"
     end
     on_arm do
       url "https://github.com/romnn/confirm/releases/download/v#{version}/confirm_#{version}_darwin_arm64.tar.gz"
-      sha256 "f174b3250693a9ae3e006715accaebbf319d9ee671157af9e06de98dddcf95ef"
+      sha256 "3c5e373d6c42edbd9b3dca41250cc981061a2beab050c6ced2cc11a57c9c59fe"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/confirm/releases/download/v#{version}/confirm_#{version}_linux_amd64.tar.gz"
-      sha256 "152a3af80559398223446a79850d9093c64ed921decf7e41f4723d745f2343f7"
+      sha256 "d44d49354fea63acefe876dfb847a3554db7c64a29f9b132c33c00ffd4a47435"
     end
     on_arm do
       url "https://github.com/romnn/confirm/releases/download/v#{version}/confirm_#{version}_linux_arm64.tar.gz"
-      sha256 "b5c16bc3a864bc6bde2e2cc7b5f10fd4d55440602d5a7526dddb504d6608ba8c"
+      sha256 "0dcac55a13e37fc69a022a51828b5f2ed81973728eb7073e8c8b22c6b8e2b71c"
     end
   end
 
