@@ -3,7 +3,7 @@ cask "cargo-bumpversion" do
   name "cargo-bumpversion"
   desc "Plugin for `cargo` to update all version strings in your project and optionally commit and tag the changes"
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cargo-bumpversion" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_darwin_amd64.tar.gz"
-      sha256 "51c237023306a8168e62aeca692d0224958578a72ae8d29069b2be7dc9af0773"
+      sha256 "31e7942f791c1cfcacae44f7a2d092754616bbe73d71c809a47ea2830f661ba6"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_darwin_arm64.tar.gz"
-      sha256 "f560d1ffad5ebcb39366d68159be94dde98e1094fa365a1837031044b789ffeb"
+      sha256 "0751dd8f2ec2554725a9255d5da4b4c6d476c7efcb619632b88448bc6a38bdeb"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_linux_amd64.tar.gz"
-      sha256 "054ed9230aa1f2d2384a5e2f5b9adf7eac308d0c9a5edacbf196f36b25eef472"
+      sha256 "a3ba5e1ea6fffb30fd9ad18e837b90ec3efd5d116c030c0310fd1538fcd323e4"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_linux_arm64.tar.gz"
-      sha256 "0bd45444beab0dacd7054786b5742669ee52b424963d1121f3e8559507ee98a6"
+      sha256 "f71b2fafe6dac11e7c4c7fd28d13d52bcfc565b5f767c2f2c1a6d043411f71bf"
     end
   end
 
