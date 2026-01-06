@@ -3,7 +3,7 @@ cask "bumpversion" do
   name "bumpversion"
   desc "Update all version strings in your project and optionally commit and tag the changes"
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "bumpversion" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_amd64.tar.gz"
-      sha256 "a29694b0801af2a4aa2b3ac58759e60c4865086c220bcb5cff0c4570343f8470"
+      sha256 "e70852d2f1a9ae6666cf67caaf91550943ada3852ab5316a83a5169875fb7181"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_arm64.tar.gz"
-      sha256 "54fe2c9c5e4e59842f048dcc595f6b18149932673167e2be8c03982ef11c2877"
+      sha256 "cc39c64ff1f5f4c4751a1f992e6612dd4af3b502e334340a651d851b3359fd26"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_amd64.tar.gz"
-      sha256 "5fc91926adbfe5f2077b6ae52ca3166cda993eede349f62e2ff2963d8fb52983"
+      sha256 "fd8f2443b44c16da77c24b1b13fd6d02749e0b123b24cb90abd9e5f0dc369c71"
     end
     on_arm do
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_arm64.tar.gz"
-      sha256 "94819d6d2970b10fa3e465e22dd314b6302c0d41d445e69275cdad253a4130d7"
+      sha256 "4636b7744e71d75b2c3a5eb15ee99db78532a5bfa30be66ed5f2475fa054a2b2"
     end
   end
 
