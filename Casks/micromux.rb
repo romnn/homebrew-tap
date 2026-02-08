@@ -3,7 +3,7 @@ cask "micromux" do
   name "micromux"
   desc "Micromux is a local process supervisor with a terminal UI"
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "micromux" do
   on_macos do
     on_intel do
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_amd64.tar.gz"
-      sha256 "59772ec89d1e5857f9b2f8c64f90dcf03d1370fb2f47e48fc6d8bb22425b5e73"
+      sha256 "8b4cb68cbb864f169d529a827addb5c46622d85425746570b5893b6196cd65a1"
     end
     on_arm do
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_arm64.tar.gz"
-      sha256 "cbdfd845462bd40fbc0c83f23e202fabe26dd44a41c95378df5ce0ca3bfb5df0"
+      sha256 "7256fb76595338658d9aa2cfdf9d464b6ac2c7732b820429096fc4615d3026f8"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_amd64.tar.gz"
-      sha256 "cad899d5c79aedd7901557a1dbbb657c25f08a3afa7a9db924716ad5353277d0"
+      sha256 "2247502022c3acc6238e0c6b9aa5deb766b8f0257bafd91efeb0d68daecdf473"
     end
     on_arm do
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_arm64.tar.gz"
-      sha256 "a7cedf195ea8543723dc666ee5b8282183e6308c35f24fa7bc20b22bb033626a"
+      sha256 "58dcca3ca811a27720ec371fa438d3cf1d64e4a7a5761280942694bc0aa47176"
     end
   end
 
