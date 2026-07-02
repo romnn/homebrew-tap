@@ -2,26 +2,26 @@
 cask "cargo-feature-combinations" do
   os macos: "darwin", linux: "linux"
 
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     on_intel do
-      sha256 "97cac58b25bedc608bad0e10d9d9e2db3d6be778e1302abe98669f47be8633fc"
+      sha256 "ee5ae6e48d7cc28e06a7f3abb61b42a3d85b09fe09c3b41d5aa002339f2afa0a"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "5e409a0b0affd18030d0eda7c9fcb9806ed56cb670730e83110b031a8a0c2cff"
+      sha256 "b871bfd17b3ce26c0fa5eae731757daa8028a89483fb788c731a3cc110126ed3"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "280c011df8756b697ead1fb1767101c878e7cd2411e1540c15afa68280a401cb"
+      sha256 "6134f7a153f892c45887f07c15da7b00c1508e4886e5d8c1cf82a9ca68a3fcb9"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "705cee16c345193e7e45d859ebf99cb53b4f77192e87021d9f562b40c9b90b80"
+      sha256 "87830dd14a04cfaf60add260c951acd856dacfc97398f3a08d9ae12b308f4e39"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_linux_arm64.tar.gz"
     end
   end
