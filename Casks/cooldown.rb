@@ -2,26 +2,26 @@
 cask "cooldown" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.3"
+  version "0.0.8"
 
   on_macos do
     on_intel do
-      sha256 "38fc4c4079510cabf3de6d722c5fe8a9a75602f42b2f9d3df61eac9ca33a3444"
+      sha256 "7c150274674d051399d4ee09ebd43a868d767864f12825e7e22c282ab6891baf"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "b12678ff4bb35973a439588b875ba25cc0e21d5cc46b08eb2d71bae45af3f2b7"
+      sha256 "24e5517a8213658e7c4448193d75635abc883a925d53c4fe74885b55081cf9f8"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "5aa65e42ab9c234486c165f506faa595d8450545b8385c23bb81529df5092f90"
+      sha256 "30101b16c98f6caf427ded13bb61bd7405645a1900ac116285fb2c47b12965fe"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "223ef80855c2d86de5f6f9e6c144ccc5fc0303802c3be68c43f18b3004e93514"
+      sha256 "641a882822d7b9f8284c6e7a42e1ea098bacc54be98ba394cca25f674be1b416"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_linux_arm64.tar.gz"
     end
   end
