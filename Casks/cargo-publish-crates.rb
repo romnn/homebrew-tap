@@ -2,27 +2,27 @@
 cask "cargo-publish-crates" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.29"
+  version "0.1.0"
 
   on_macos do
     on_intel do
+      sha256 "6763e7c5b7a0c6a475c5da63fc85c18c6474d4c2a697129a627cd73cea6c85da"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_darwin_amd64.tar.gz"
-      sha256 "59a03d3776a86b0ff1fec68c0ca15857d4e787a76b68d58242d428d4a4fcff53"
     end
     on_arm do
+      sha256 "a06fb6052b4ae8b67eef73d46e8b1b8a45934b29c0b808619baf31ca9a66ed7a"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_darwin_arm64.tar.gz"
-      sha256 "9494b1425ee5ede68d2a62f0a95a0926e0bc077c636d7d4815679da896ac4805"
     end
   end
 
   on_linux do
     on_intel do
+      sha256 "f6c43fe0469d71f4c00e58043263101e79ee4d37c9f9413f9bb89a33f2044f67"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_linux_amd64.tar.gz"
-      sha256 "3a8982226c1b51487d704ca95bc49c7b9fa8f25a47f3f72bc832ed46cc27be7f"
     end
     on_arm do
+      sha256 "56b6734e254f800c207e25b0d931bbb7ee87bcd709f771d827aca5ea01fce9ee"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_linux_arm64.tar.gz"
-      sha256 "4c0e7496f0a8b526ed18a1cacba66ae7c7f34621f2f927ce4fc73f7f7b1e2048"
     end
   end
 
