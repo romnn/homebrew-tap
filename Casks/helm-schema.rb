@@ -2,26 +2,26 @@
 cask "helm-schema" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     on_intel do
-      sha256 "c2d23c1b6df4ef18bf33c18efcbae5e848d6d5945922905166f818fcdbb70182"
+      sha256 "0e53fd61ba8044599e73a28047fe84621b03d8b453fe3119bbae395a8b26dc3d"
       url "https://github.com/romnn/helm-schema/releases/download/v#{version}/helm-schema_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "54df7f78afc7efc4dee20b0bbaa585c4a1d70ded6cfec077df1cb557c845b2a6"
+      sha256 "22eee40c02d68c46ebfcef785cee8ea0cb6008e2d38e3e54ca9b0521d8e8aee4"
       url "https://github.com/romnn/helm-schema/releases/download/v#{version}/helm-schema_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "0a322093ee1df70b1ad5044442ab798ed3f8d2451ad344c220ca35ac2836707c"
+      sha256 "652768bb9d18c1b2a96924ee309e94442fa466eee1f19a7576729bea9f0bd1fb"
       url "https://github.com/romnn/helm-schema/releases/download/v#{version}/helm-schema_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "1c4ede6808bd73512c70596bb07fad289f5ee114f558a1c3a7a57dcfd08b0b55"
+      sha256 "922ead4cf59c8a8946f9f04323765dc8b02d4d2a68e0a23f023cbae84341fb5b"
       url "https://github.com/romnn/helm-schema/releases/download/v#{version}/helm-schema_#{version}_linux_arm64.tar.gz"
     end
   end
