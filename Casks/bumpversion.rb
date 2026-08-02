@@ -2,26 +2,26 @@
 cask "bumpversion" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     on_intel do
-      sha256 "b2fe1e371405795bd10c2a1d0560022879574c906888827298debadbe45f95c5"
+      sha256 "f9a6889f4709b9a9c34c76eb7a25aedf0f04982c02bdfe7dc956c642e413e904"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "3542d246cba084211ac8af5ef8664a3bf85b5658756f3cc1d47201600fb130d4"
+      sha256 "557d5f2cd562093993e46a2ea9d6833d7a2dca7ea6fe71834b27e61819f27089"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "1bf039d01350bfffc0e1ceb82faefd84988497cdbe81020f5de058da2622a032"
+      sha256 "be722778a2fc4bb9fcf14e72873e72fa5ca678034998eb497d3518d5a4b09fe7"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "70d26d3fdfa9f92f2474cbf7c0c251c49bc34f1c6cc7336da530465dde945376"
+      sha256 "1cb8016c18efddd0841877a35d997848b2e6b55d37d209cf3c322ecb1f83a098"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/bumpversion_#{version}_linux_arm64.tar.gz"
     end
   end
