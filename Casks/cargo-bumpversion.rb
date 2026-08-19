@@ -2,26 +2,26 @@
 cask "cargo-bumpversion" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
     on_intel do
-      sha256 "9e49fdf9af81fd2a8b7e7811c6bfbd2784a7540012d5aada5bb8dcb850507598"
+      sha256 "651e59e27a246b0242bc57cb5dae4ecf27aa885af4c1c085eddd38e4348a4ede"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8c1c35dec35a50f07286e19245b3336c0f335d4c65c13c3ad5d7eefc4a7ab4db"
+      sha256 "43fec5921333990258f2cb48309eb88da00c2cbd81282c60b23ab644ea426b61"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "b80a0ed8f920156e5fde206c92bc39aa69e191e33bcac916fa69ca3bab151370"
+      sha256 "b57133f05729bf530f23841408508e5504484ada62283ce4c0f47344b8a512b6"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "74d33c7020ffc5b4b03bfb81f18ccf20fb253142aedaa0775108320380631a13"
+      sha256 "608c55ffbf71e7e0dc5e0d9f1938879244fd1d258be25c7c2b306bdbb16adbd3"
       url "https://github.com/romnn/bumpversion/releases/download/v#{version}/cargo-bumpversion_#{version}_linux_arm64.tar.gz"
     end
   end
