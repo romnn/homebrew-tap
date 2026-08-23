@@ -2,26 +2,26 @@
 cask "cargo-dirty" do
   os macos: "darwin", linux: "linux"
 
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_intel do
-      sha256 "615ea859aeef5591f4c4ee910eb25881e5193bdbc8f5881d85ed22460567f5ac"
+      sha256 "af1cc0b5f4f8b163e9862ff2598024a607e1b77ec4582af3cb1e41fbc299c6b7"
       url "https://github.com/romnn/cargo-dirty/releases/download/v#{version}/cargo-dirty_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "f281bef1a81834309bf386b32b9f53150010e742d0c8bec8bdfee1ea680d86da"
+      sha256 "9621dd3c013f9365de20ff4a2c66bd783c40efc42f5a8a6563a288a3b086e1c2"
       url "https://github.com/romnn/cargo-dirty/releases/download/v#{version}/cargo-dirty_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "a73144711fb537dafd0abfeab619056fcbe5fdfd4a67451216e0954e940357ab"
+      sha256 "4e324b316c82405a473997eabc68a4dcdc2fdc124d97981fe9cf3033130637ee"
       url "https://github.com/romnn/cargo-dirty/releases/download/v#{version}/cargo-dirty_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "ffef1116ab5f1abed2d0c59ee2822920c64d3648a93a9c4e41a25969ddcbbba6"
+      sha256 "f30f87e5cdb66e21b308c41942acd199cb4fe57de519a113e5ddd97cdaa981a9"
       url "https://github.com/romnn/cargo-dirty/releases/download/v#{version}/cargo-dirty_#{version}_linux_arm64.tar.gz"
     end
   end
