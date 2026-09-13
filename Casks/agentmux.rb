@@ -2,26 +2,26 @@
 cask "agentmux" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     on_intel do
-      sha256 "9e737cd9f148409a85a8bfbbcbdddd44947575845f810c46a3bad33abc448d37"
+      sha256 "dd3da12ddace94b4b60d9979112486974a5e8c70c6afe8ce629090d4f8e08659"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "1ee534211c32eb7f45aebd67fb42782efe3571ec87ac440a895165a5f2023b87"
+      sha256 "8518f04075247bc73b4f648c5f63819d5ea84ca68010ae7392006aa3ab54ada7"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "ae5fd078b7b851de56c99f8031d0f33f73666acd44c96ba20af485a8e1456a8f"
+      sha256 "d294225c89b796a4da650aedd827249d1f83faa06f4fb7551f2b6eb067cae1b0"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "5199ebab8bae186637b2fa99a586a939842aa0cee2ee43fe4a31af8b011d3318"
+      sha256 "a741ee9164b4e3ad5b2303effe548a9fb9358445535b881687621c43a1358d2d"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_linux_arm64.tar.gz"
     end
   end
