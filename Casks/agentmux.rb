@@ -2,26 +2,36 @@
 cask "agentmux" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.8"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/agentmux"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.0.9"
 
   on_macos do
     on_intel do
-      sha256 "dd3da12ddace94b4b60d9979112486974a5e8c70c6afe8ce629090d4f8e08659"
+      sha256 "7ab96a9fb1b8d6065cdff4a25661861a285f406aab9934ff80c1fea186891936"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8518f04075247bc73b4f648c5f63819d5ea84ca68010ae7392006aa3ab54ada7"
+      sha256 "c09b608d21dd633d1401a0325c7e23e1c866d84dfbad1a9f8870cafa792a8e80"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "d294225c89b796a4da650aedd827249d1f83faa06f4fb7551f2b6eb067cae1b0"
+      sha256 "761a1c8167dcaeb84c38febffdbcf5a6e213331df466a342e6e2272cc6cd21e9"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a741ee9164b4e3ad5b2303effe548a9fb9358445535b881687621c43a1358d2d"
+      sha256 "74a6d15d940791ccea55b75ab2dc14c146b3a484312e12ada70806044d3c7f0a"
       url "https://github.com/romnn/agentmux/releases/download/v#{version}/agentmux_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "agentmux" do
   end
 
   binary "agentmux"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/agentmux"]
-    end
-  end
 
   # No zap stanza required
 
