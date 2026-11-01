@@ -12,26 +12,26 @@ cask "progeny" do
     end
   end
 
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     on_intel do
-      sha256 "623a10889fd4ce5a6ab51d72b5e16ff125b8b0e481a965023c2346182551cf0d"
+      sha256 "c34d68843f5eac32dad142ab8dbbe180ce065d86462a0dfcc7ccfce005a1dcf3"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/progeny_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "43b07c7eb30d1b9e1f42de0ccdcd5fddeb2c833da168471319c0a228a76d3e6c"
+      sha256 "c142eb94e8c59cb9eb7ac7b071d72a5529d6e33c17f9ac05abd01e6ab5c2051f"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/progeny_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "e06c2a602d0b0648fbcda6f16e6eddd6eae499a69e18f6116d5131cff88d04ff"
+      sha256 "5313e5688329df93dbfdb9992af319f9fc51de03622ab5cca2ee130a991879c5"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/progeny_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "7cea87a4058d4a6c695e32b99a5a28a9c9cbb935a940f07c9de7b140fabf25b3"
+      sha256 "da2313b916223e5195880456c8d777fcd5bc3c490339ec8d011ed457e9c53146"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/progeny_#{version}_linux_arm64.tar.gz"
     end
   end
