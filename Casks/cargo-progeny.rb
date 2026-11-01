@@ -12,26 +12,26 @@ cask "cargo-progeny" do
     end
   end
 
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     on_intel do
-      sha256 "67a741c4f25c5b3593a28e9fe84288b30db4ebdb74a528d24019e14745708f8e"
+      sha256 "6fede3e83e0c9a28f81e33f77cda1cb5dd6e952931860797ab507aedc2dd2750"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/cargo-progeny_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "abd6593a85cb6a8fbe7db635a0fc69c9be2e4fd19c55d117338b62b024377c3c"
+      sha256 "825fe978768232a164169f2ef5d0ddf38514cc4ca421a1479967594acdf1c541"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/cargo-progeny_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "3cb8f3dc07b3edb380441a6139d2ca7f075652bb358fa8a6b610c03f9bd65eb1"
+      sha256 "8b85263c3d81485c6036357a26fca883b8c65d83eaa87502c1f485da23ee178d"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/cargo-progeny_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "98197b3467fb4cadc2346da37a6a1e3d96c6896897edd6638537c64cc942e5b5"
+      sha256 "66b4d47578b3170ad2da6f0fb2246b83eccf58971806badb37747651cbebbb7c"
       url "https://github.com/romnn/progeny/releases/download/v#{version}/cargo-progeny_#{version}_linux_arm64.tar.gz"
     end
   end
