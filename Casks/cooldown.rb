@@ -2,26 +2,36 @@
 cask "cooldown" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.27"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cooldown"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.0.28"
 
   on_macos do
     on_intel do
-      sha256 "61e75f16e052b2fde2ae61f1a97d9cff7e5bbf911c7e246d8fa4736aef7e44bc"
+      sha256 "535f9967992acb57b66c3984399685c89164ac2399127707944b6f01fd5826f3"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8f314829586e93915e7b4772ed8f973bb7a1ee190bd49b0beed06d97d1367307"
+      sha256 "60babcc2b87bb81405709f929fe0d2b4617a5488cc1f250cafb84fb09062126b"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "061fbbe4bd6f2908237c66910595a37c87b199172272f5d8956a78635cd18113"
+      sha256 "ba5397373ed6446ac2e6e58891e9aedbfb623d2032aa1167caa1fdb87215867b"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "bace5969d44730b8a613f1758ed01fbe89c10edecd444d285f46598cd0638ac6"
+      sha256 "aaac460b4742a9b386896ae8b11aba0a1ea298e5cb5f4634d56e56719af105c0"
       url "https://github.com/romnn/cooldown/releases/download/v#{version}/cooldown_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "cooldown" do
   end
 
   binary "cooldown"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cooldown"]
-    end
-  end
 
   # No zap stanza required
 
