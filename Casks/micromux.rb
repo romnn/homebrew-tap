@@ -2,26 +2,36 @@
 cask "micromux" do
   os macos: "darwin", linux: "linux"
 
-  version "0.3.0"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/micromux"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.4.0"
 
   on_macos do
     on_intel do
-      sha256 "118d565975ad9050c799d46fa4e959ba31438da9f518456796431dcb0565ef03"
+      sha256 "d86a05ba01be4bb68f9d22cf0c5ca1ae71874c5d0234590a9a9a01a9e7295cd9"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "da1420da2706a07d23c773940a66ebf7a44bcb788e63dd98a65b4b370b3111b8"
+      sha256 "1e486276e8c987d51b4f7386eb53d02747a85388a84f6dbcae3844614c772d97"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "f0463c650245b422cb67c4c50b196bbf8365e0888deb24867a89c51c97173755"
+      sha256 "e826fa160af9367daa6f40d7a4821be17c1d0a29e9328f11bcefafd465ac7b79"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "75527c691a5adb963c1145a2263a32fcbbf7598ca719965b85b764829a93cc5d"
+      sha256 "9c0f9bfabacc0c1adb06ecc2042070c8eba2ea370248c1636c76fbcc6052228a"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "micromux" do
   end
 
   binary "micromux"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/micromux"]
-    end
-  end
 
   # No zap stanza required
 
