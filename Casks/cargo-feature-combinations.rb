@@ -2,26 +2,36 @@
 cask "cargo-feature-combinations" do
   os macos: "darwin", linux: "linux"
 
-  version "0.8.0"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cargo-feature-combinations"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.9.0"
 
   on_macos do
     on_intel do
-      sha256 "5be5f83943cd1c619ac2c1cd25ad3982f24d538bad12ed930242e2daa57d6a89"
+      sha256 "f5ec9a7b892de4f7cafaf7867d380a8970c079f75b0644e7e5707f0f16307759"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "2557f30485a6d4e48945f92a8500cd6df8cb07304dac27ee775de840e9343cd0"
+      sha256 "910fb33d18bf28a4bdaca8e8b9a1b274b2d2cd5c9711c6c1efff3e6d39b4136a"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "ff018625d982c41faee036e72fa575eb89a49680a20c7956e5bd96c017f8258c"
+      sha256 "b2ad48e759fd2b984ad0ad640cf4008511aec26f11f3f012e92c9b9363f390bd"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a604c7cb67432d76ea56c4b408695ca8e5be1e67f773d52d6751cc14e49413de"
+      sha256 "e324f8bbf1e946e7c2c0b43ae06f52033112ab6da1e3cd4c68c703031dea03fb"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-feature-combinations_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "cargo-feature-combinations" do
   end
 
   binary "cargo-feature-combinations"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cargo-feature-combinations"]
-    end
-  end
 
   # No zap stanza required
 
