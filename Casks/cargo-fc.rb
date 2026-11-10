@@ -2,26 +2,36 @@
 cask "cargo-fc" do
   os macos: "darwin", linux: "linux"
 
-  version "0.8.0"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cargo-fc"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.9.0"
 
   on_macos do
     on_intel do
-      sha256 "ffd68f5dedd26c2539f3bf21d3f40565c69476f70d7be003f528128336b056b9"
+      sha256 "c4b4d2289da1a4604420122cb937e6d4dd59ff2b6608c17051be579bb450f880"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "3ae06258a4013d9601e87a903190e1cbd979fa8997ed537b6681456df6f1c4f9"
+      sha256 "bd259e0a9a55053bf6581961be09176cbdcdd8cc2171fc42993620c732f889bc"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "41b42fdfd06c7b2a1689485a8dcd1482bb19efc09a6e19ce10774706a4830be9"
+      sha256 "dd8aba9f91a59ad6e866807afbcc28301a8fdc5ad9d6a3988d4881ffc14c7862"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "6ef57b7dcf194a94ecb5f87d795d0f93548dea3e3284035317ad21ae41f7e85a"
+      sha256 "b979242e453918e02e10fddc09e0c4400343506f39eb399432d3af43ab6733fa"
       url "https://github.com/romnn/cargo-feature-combinations/releases/download/v#{version}/cargo-fc_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "cargo-fc" do
   end
 
   binary "cargo-fc"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cargo-fc"]
-    end
-  end
 
   # No zap stanza required
 
