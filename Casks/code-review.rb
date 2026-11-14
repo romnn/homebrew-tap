@@ -6,31 +6,31 @@ cask "code-review" do
     on_macos do
       if_path_exists "/usr/bin/xattr" do
         run "/usr/bin/xattr",
-            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cr", "{{staged_path}}/review-tui"],
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cr"],
             must_succeed: false
       end
     end
   end
 
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     on_arm do
-      sha256 "26287bd6363ba52a3b4d1751f315df9c353ca03a0e9860a4203d3b343d9c8405"
+      sha256 "ab7935beb75e93bdafb276abfc9acfdd68cc09214ae237639179a9676aa03cb0"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "7a3a0ec844f74f616006654787b1ba40370ed04e719cdf984a35fa8cef81c228"
+      sha256 "e896f41c3d73cc6dbee0ed8f47d6479a2e1e57da298e8348a47703b26bcaf762"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "e2ee1198630fa3d3fcd1df41a93fc39cb49c3cab65972ed1456518f6b6ec3007"
+      sha256 "959b9b91af1d9c23ae51b28fe65c6b43077f37be19eb286f7b71029704bd1b25"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "8692e9cc7be7863786f9f9c899aa722a91b83f10eec0697b1724c2f6bd3c3b1a"
+      sha256 "a5030085555220e795e627aa829c67f54733c8ea2d3a41e1783e3035abf095e7"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -44,7 +44,6 @@ cask "code-review" do
   end
 
   binary "cr"
-  binary "review-tui"
 
   zap :not_required
 end
