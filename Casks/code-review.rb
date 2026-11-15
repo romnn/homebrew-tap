@@ -12,25 +12,25 @@ cask "code-review" do
     end
   end
 
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     on_arm do
-      sha256 "ab7935beb75e93bdafb276abfc9acfdd68cc09214ae237639179a9676aa03cb0"
+      sha256 "25c4e28dd9887160f5188dd2cb23aa880e8b0b734ef02fcf45354d6f09054ea5"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e896f41c3d73cc6dbee0ed8f47d6479a2e1e57da298e8348a47703b26bcaf762"
+      sha256 "a2c8b200a4e41c990bbdc99b950b989d0cd7425413ba705a3da28f77d800a4e5"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "959b9b91af1d9c23ae51b28fe65c6b43077f37be19eb286f7b71029704bd1b25"
+      sha256 "bfcd153be37a47f641c19d9bfbbaafe064c916e1949a5d28fb0af4852c7cd111"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a5030085555220e795e627aa829c67f54733c8ea2d3a41e1783e3035abf095e7"
+      sha256 "b7954bd0fb61f246b347a360aeb9bace67ff1036d760873ae0947e1151de5503"
       url "https://github.com/romnn/code-review/releases/download/v#{version}/code-review_#{version}_linux_amd64.tar.gz"
     end
   end
