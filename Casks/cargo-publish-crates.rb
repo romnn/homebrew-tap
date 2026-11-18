@@ -2,26 +2,36 @@
 cask "cargo-publish-crates" do
   os macos: "darwin", linux: "linux"
 
-  version "0.1.0"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/cargo-publish-crates"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      sha256 "6763e7c5b7a0c6a475c5da63fc85c18c6474d4c2a697129a627cd73cea6c85da"
+      sha256 "442747719ff92af22fa5ac27f81a8ab30205f4ed3678f90cf2175755bf2a6e28"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a06fb6052b4ae8b67eef73d46e8b1b8a45934b29c0b808619baf31ca9a66ed7a"
+      sha256 "b7239def942d6e3f5efe26b508432f219f74fd3c8617f5d4f259027018c41eb3"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "f6c43fe0469d71f4c00e58043263101e79ee4d37c9f9413f9bb89a33f2044f67"
+      sha256 "68e7630812ba1d2388d381d033e3c575bfe8c2ec134d0a97f1fba28ed1028558"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "56b6734e254f800c207e25b0d931bbb7ee87bcd709f771d827aca5ea01fce9ee"
+      sha256 "9b6a8f7427d92edde27e43e38d08577919094c4b925160e0040d873aec4335c2"
       url "https://github.com/romnn/publish-crates/releases/download/v#{version}/cargo-publish-crates_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "cargo-publish-crates" do
   end
 
   binary "cargo-publish-crates"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cargo-publish-crates"]
-    end
-  end
 
   # No zap stanza required
 
