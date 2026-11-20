@@ -12,26 +12,26 @@ cask "micromux" do
     end
   end
 
-  version "0.4.6"
+  version "0.4.7"
 
   on_macos do
     on_intel do
-      sha256 "f9719acd8d1196da0e988db7fb2b5af86ddf52bff2a0e4c54d3364131ea14caf"
+      sha256 "74a48fc23b222e3667b42b4ba05bff7ceaa974ab875c6f15b13757c1fdd68430"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "ba2ebf5e80784d96af28b7eed900e3b87e789337fa898f18b728f32db7d3e228"
+      sha256 "eda54b9625870d47a2820b482f148dca347c570f5b9f1c69929e185b03774f2b"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "7189d8502a637b146e1a0e8e3544c477833f2a941c8bc6f279a4fe82f7a22626"
+      sha256 "095ed9ead4ccf15cde43f00e07a31cbf6f613a91312300e604104918ce21e8fa"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "a439a9cda93e66d9da6e10eb75a504869c93fa9c4696b096f220dac392432cc6"
+      sha256 "349d5f3e4ffd2af81bff4e6251867115f3aa560e1a0d9f21ae8d24da4ba8b229"
       url "https://github.com/romnn/micromux/releases/download/v#{version}/micromux_#{version}_linux_arm64.tar.gz"
     end
   end
